@@ -9,8 +9,10 @@ namespace Grades
 {
     class GradeBooks
     {
-        //HOld State adn Behavior
-
+        public GradeBooks()
+        {
+            grades = new List<float>();
+        }
         public void AddGrade(float grade)
         {
             grades.Add(grade);
@@ -18,8 +20,7 @@ namespace Grades
 
         //use list from the collection to store grades
 
-        List<float> grades = new List<float>(); // use the paren becz a new2 list object is constructed.
-
+        List<float> grades; 
     }
 
     class Program
