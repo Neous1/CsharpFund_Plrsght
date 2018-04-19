@@ -23,7 +23,19 @@ namespace Grades
 
         public GradeStatistics CommputeStatistics()
         {
-            return new GradeStatistics();
+            //create a variable to point to the new instance of 
+            //GradeStatistic
+            GradeStatistics stats =  new GradeStatistics();
+
+            stats.HighestGrade = 0;
+
+            float sum = 0;
+            foreach (float grade in grades)
+            {
+                sum += grade; 
+            }
+            stats.AverageGrade = sum / grades.Count;
+            return stats;
         }
     }
 }
