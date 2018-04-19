@@ -12,20 +12,12 @@ namespace Grades
         {
             grades = new List<float>();
         }
-        public void AddGrade(float grade)
-        {
-            grades.Add(grade);
-        }
 
-        //use list from the collection to store grades
-
-        List<float> grades;
-
-        public GradeStatistics CommputeStatistics()
+        public GradeStatistics ComputeStatistics()
         {
             //create a variable to point to the new instance of 
             //GradeStatistic
-            GradeStatistics stats =  new GradeStatistics();
+            GradeStatistics stats = new GradeStatistics();
 
             stats.HighestGrade = 0;
 
@@ -34,10 +26,21 @@ namespace Grades
             {
                 stats.HighestGrade = Math.Max(grade, stats.HighestGrade);
                 stats.LowestGrades = Math.Min(grade, stats.LowestGrades);
-                sum += grade; 
+                sum += grade;
             }
             stats.AverageGrade = sum / grades.Count;
             return stats;
         }
+
+        public void AddGrade(float grade)
+        {
+            grades.Add(grade);
+        }
+
+        //use list from the collection to store grades
+
+        private List<float> grades;
+
+
     }
 }
