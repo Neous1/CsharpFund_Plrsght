@@ -12,4 +12,4 @@
         public float HighestGrade;
         public float LowestGrades;
     }
-}
+} 
