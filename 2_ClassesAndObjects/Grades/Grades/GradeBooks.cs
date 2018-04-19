@@ -20,5 +20,10 @@ namespace Grades
         //use list from the collection to store grades
 
         List<float> grades;
+
+        public GradeStatistics CommputeStatistics()
+        {
+            return new GradeStatistics();
+        }
     }
 }
