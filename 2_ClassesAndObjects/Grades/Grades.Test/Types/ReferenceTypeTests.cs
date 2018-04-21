@@ -21,12 +21,10 @@ namespace Grades.Test.Types
             Assert.AreNotEqual(x1, x2);
         } 
         [TestMethod]
-        public void VariableHoldAReference()
+        public void GradeBookVariableHoldAReference()
         {
             GradeBooks g1 = new GradeBooks();
             GradeBooks g2 = g1;
-
-            g1 = new GradeBooks();
 
             g1.Name = "Yvon's grade book";
             Assert.AreEqual(g1.Name, g2.Name);
