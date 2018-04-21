@@ -37,7 +37,10 @@ namespace Grades
             grades.Add(grade);
         }
 
-        //use list from the collection to store grades
+
+        public string Name;
+
+         //use list from the collection to store grades
 
         private List<float> grades;
 

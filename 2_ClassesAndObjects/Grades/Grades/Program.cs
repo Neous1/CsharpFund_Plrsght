@@ -12,22 +12,25 @@ namespace Grades
 
         static void Main(string[] args)
         {
-            
+            GradeBooks g1 = new GradeBooks();
+            GradeBooks g2 = g1;
 
-            GradeBooks book = new GradeBooks(); //define a variable book of type Gradbooks
-            book.AddGrade(91);
-            book.AddGrade(89.5f);
-            book.AddGrade(75);
+            g1.Name = "Yvon's grade book";
+            Console.WriteLine(g2.Name);
+            //GradeBooks book = new GradeBooks(); //define a variable book of type Gradbooks
+            //book.AddGrade(91);
+            //book.AddGrade(89.5f);
+            //book.AddGrade(75);
 
-            GradeStatistics stats = book.ComputeStatistics();
+            //GradeStatistics stats = book.ComputeStatistics();
 
-            Console.WriteLine("Average Grade: " + stats.AverageGrade);
-            Console.WriteLine("Highest Grade: " + stats.HighestGrade);
-            Console.WriteLine("Lowest Grade: " +  stats.LowestGrades);
+            //Console.WriteLine("Average Grade: " + stats.AverageGrade);
+            //Console.WriteLine("Highest Grade: " + stats.HighestGrade);
+            //Console.WriteLine("Lowest Grade: " +  stats.LowestGrades);
 
 
-            
-            
+
+
         }
     }
 
