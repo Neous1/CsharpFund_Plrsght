@@ -24,20 +24,25 @@ namespace Grades.Test.Types
             // number is equal to 46 because the value of x is passed to IncrementNumber
            number += 1; // number +1 is inconsequential to our test.
         }
+
+
         [TestMethod]
         public void ReferenceTypesPassByValue()
         {
             GradeBooks book1 = new GradeBooks();
             GradeBooks books2 = book1;
 
-            GiveBookAName(books2);
-            Assert.AreEqual("A Gradebook", book1.Name);
+            GiveBookAName(ref books2);
+            Assert.AreEqual("A Gradebook", book1.Name); // test fails cuz book2's name is null 
         }
 
-        private void GiveBookAName(GradeBooks book)
+        private void GiveBookAName(ref GradeBooks book)
         {
+            book = new GradeBooks();
             book.Name = "A Gradebook";
         }
+
+
         [TestMethod]
         public void StringComparisons()
         {
