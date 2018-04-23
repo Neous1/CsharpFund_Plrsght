@@ -9,9 +9,35 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Grades.Test.Types
 {
     [TestClass]
-    public class ReferenceTypeTests
+    public class TypeTests
     {
+        [TestMethod]
+        public void ValueTypesPassByValue()
+        {
+            int x = 46;
+            IncrementNumber(x);
+            Assert.AreEqual(46, x);
+        }
 
+        private void IncrementNumber(int number)
+        {
+            // number is equal to 46 because the value of x is passed to IncrementNumber
+           number += 1; // number +1 is inconsequential to our test.
+        }
+        [TestMethod]
+        public void ReferenceTypesPassByValue()
+        {
+            GradeBooks book1 = new GradeBooks();
+            GradeBooks books2 = book1;
+
+            GiveBookAName(books2);
+            Assert.AreEqual("A Gradebook", book1.Name);
+        }
+
+        private void GiveBookAName(GradeBooks book)
+        {
+            book.Name = "A Gradebook";
+        }
         [TestMethod]
         public void StringComparisons()
         {
