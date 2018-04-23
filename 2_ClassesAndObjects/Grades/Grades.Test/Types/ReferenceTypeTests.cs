@@ -26,8 +26,11 @@ namespace Grades.Test.Types
             GradeBooks g1 = new GradeBooks();
             GradeBooks g2 = g1;
 
+            g1 = new GradeBooks(); // g1 now points to a new gradebook but g2 still points to the old gradebook so g1 is not equal to g2.
+
+
             g1.Name = "Yvon's grade book";
-            Assert.AreEqual(g1.Name, g2.Name);
+            Assert.AreNotEqual(g1.Name, g2.Name);
         
         }
     }
