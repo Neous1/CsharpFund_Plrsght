@@ -11,6 +11,7 @@ namespace Grades.Test.Types
     [TestClass]
     public class TypeTests
     {
+
         [TestMethod]
         public void ValueTypesPassByValue()
         {
@@ -30,10 +31,10 @@ namespace Grades.Test.Types
         public void ReferenceTypesPassByValue()
         {
             GradeBooks book1 = new GradeBooks();
-            GradeBooks books2 = book1;
+            GradeBooks book2 = book1;
 
-            GiveBookAName(ref books2);
-            Assert.AreEqual("A Gradebook", book1.Name); // test fails cuz book2's name is null 
+            GiveBookAName(ref book2);
+            Assert.AreEqual("A Gradebook", book2.Name); // test fails cuz book2's name is null 
         }
 
         private void GiveBookAName(ref GradeBooks book)
