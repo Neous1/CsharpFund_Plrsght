@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,14 @@ namespace Grades.Test.Types
     [TestClass]
     public class TypeTests
     {
+        [TestMethod]
+        public void UppercaseString()
+        {
+            string name = "yvon";
+            name.ToUpper();
+
+            Assert.AreEqual("YVON", name);
+        }
         [TestMethod]
         public void AddDaysToDateTime()
         {
