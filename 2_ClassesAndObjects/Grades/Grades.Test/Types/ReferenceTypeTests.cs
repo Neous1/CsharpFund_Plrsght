@@ -15,9 +15,9 @@ namespace Grades.Test.Types
         public void AddDaysToDateTime()
         {
             DateTime date = new DateTime(2018, 4, 25);
-            date.AddDays(1);
+            date = date.AddDays(1);
 
-            Assert.AreNotEqual(26, date.Day);
+            Assert.AreEqual(26, date.Day);
         }
 
         [TestMethod]
