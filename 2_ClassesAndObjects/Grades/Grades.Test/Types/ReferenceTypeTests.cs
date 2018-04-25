@@ -11,6 +11,14 @@ namespace Grades.Test.Types
     [TestClass]
     public class TypeTests
     {
+        [TestMethod]
+        public void AddDaysToDateTime()
+        {
+            DateTime date = new DateTime(2018, 4, 25);
+            date.AddDays(1);
+
+            Assert.AreEqual(26, date.Day);
+        }
 
         [TestMethod]
         public void ValueTypesPassByValue()
