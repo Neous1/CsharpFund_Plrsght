@@ -16,7 +16,7 @@ namespace Grades.Test.Types
         public void UppercaseString()
         {
             string name = "yvon";
-            name.ToUpper();
+            name = name.ToUpper();
 
             Assert.AreEqual("YVON", name);
         }
