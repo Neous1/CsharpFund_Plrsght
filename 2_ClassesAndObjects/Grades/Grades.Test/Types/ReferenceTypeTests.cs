@@ -44,7 +44,6 @@ namespace Grades.Test.Types
 
             Assert.AreEqual(26, date.Day);
         }
-
         [TestMethod]
         public void ValueTypesPassByValue()
         {
