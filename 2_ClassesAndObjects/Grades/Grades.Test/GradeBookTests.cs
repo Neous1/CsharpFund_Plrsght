@@ -13,7 +13,7 @@ namespace Grades.Test
         [TestMethod]
         public void ComputeHighestGrade()
         {
-            GradeBooks book = new GradeBooks();
+            GradeBook book = new GradeBook();
             book.AddGrade(10);
             book.AddGrade(90);
 
@@ -24,7 +24,7 @@ namespace Grades.Test
         [TestMethod]
         public void ComputeLowestGrade()
         {
-            GradeBooks book = new GradeBooks();
+            GradeBook book = new GradeBook();
             book.AddGrade(10);
             book.AddGrade(90);
 
@@ -35,7 +35,7 @@ namespace Grades.Test
         [TestMethod]
         public void ComputeAverageGrade()
         {
-            GradeBooks book = new GradeBooks();
+            GradeBook book = new GradeBook();
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);

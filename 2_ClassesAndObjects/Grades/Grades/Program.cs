@@ -14,7 +14,7 @@ namespace Grades
         static void Main(string[] args)
         {
 
-            GradeBooks book = new GradeBooks(); //define a variable book of type Gradbooks
+            GradeBook book = new GradeBook(); //define a variable book of type Gradbooks
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);

@@ -62,16 +62,16 @@ namespace Grades.Test.Types
         [TestMethod]
         public void ReferenceTypesPassByValue()
         {
-            GradeBooks book1 = new GradeBooks();
-            GradeBooks book2 = book1;
+            GradeBook book1 = new GradeBook();
+            GradeBook book2 = book1;
 
             GiveBookAName(ref book2);
             Assert.AreEqual("A Gradebook", book2.Name); // test fails cuz book2's name is null 
         }
 
-        private void GiveBookAName(ref GradeBooks book)
+        private void GiveBookAName(ref GradeBook book)
         {
-            book = new GradeBooks();
+            book = new GradeBook();
             book.Name = "A Gradebook";
         }
 
@@ -97,10 +97,10 @@ namespace Grades.Test.Types
         [TestMethod]
         public void GradeBookVariableHoldAReference()
         {
-            GradeBooks g1 = new GradeBooks();
-            GradeBooks g2 = g1;
+            GradeBook g1 = new GradeBook();
+            GradeBook g2 = g1;
 
-            g1 = new GradeBooks(); // g1 now points to a new gradebook but g2 still points to the old gradebook so g1 is not equal to g2.
+            g1 = new GradeBook(); // g1 now points to a new gradebook but g2 still points to the old gradebook so g1 is not equal to g2.
 
 
             g1.Name = "Yvon's grade book";
