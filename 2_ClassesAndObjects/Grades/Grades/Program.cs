@@ -14,9 +14,11 @@ namespace Grades
         static void Main(string[] args)
         {
 
-            GradeBook book = new GradeBook(); //define a variable book of type Gradbooks
+            GradeBook book = new GradeBook(); 
+
+            book.NameChanged = new  NameChangedDelegate(OnNameChanged);
             book.Name = "Yvon's Grade book";
-            book.Name = null;
+            book.Name = "Grade book";
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);
@@ -27,6 +29,11 @@ namespace Grades
             WriteResult("Average Grade" , stats.AverageGrade);
             WriteResult("Highest Grade" , (int)stats.HighestGrade); //stats highestGrade gets coerces into type int
             WriteResult("Lowest Grade" , stats.LowestGrades);
+        }
+
+        private static void OnNameChanged(string existingname, string newName)
+        {
+            Console.WriteLine($"Grade book changing name from {existingname} to {newName}");
         }
 
         static void WriteResult(string description, int result)
