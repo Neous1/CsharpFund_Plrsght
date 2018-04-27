@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.WebSockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,8 +33,12 @@ namespace Grades
 
         static void WriteResult(string description, float result)
         {
-            Console.WriteLine(description + ": " + result);
+            //Console.WriteLine(description + ": " + result);
+            //Console.WriteLine("{0}: {1}", description, result);
+            //Console.WriteLine($"{description}: {result}", description, result);
+            Console.WriteLine($"{description}: {result:F2}", description, result);
         }
     }
 
 }
+
