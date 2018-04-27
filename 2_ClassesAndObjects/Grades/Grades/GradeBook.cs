@@ -38,9 +38,20 @@ namespace Grades
         }
 
 
-        public string Name;
 
-         //use list from the collection to store grades
+        public string Name
+        {
+            get { return _name; }
+            set
+            {
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _name = value;
+                }
+            }
+        }
+
+        private string _name;
 
         private List<float> grades;
 

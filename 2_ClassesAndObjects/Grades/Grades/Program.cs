@@ -15,12 +15,15 @@ namespace Grades
         {
 
             GradeBook book = new GradeBook(); //define a variable book of type Gradbooks
+            book.Name = "Yvon's Grade book";
+            book.Name = null;
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);
 
             GradeStatistics stats = book.ComputeStatistics();
 
+            Console.WriteLine(book.Name);
             WriteResult("Average Grade" , stats.AverageGrade);
             WriteResult("Highest Grade" , (int)stats.HighestGrade); //stats highestGrade gets coerces into type int
             WriteResult("Lowest Grade" , stats.LowestGrades);
