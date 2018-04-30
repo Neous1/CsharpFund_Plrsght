@@ -27,9 +27,15 @@ namespace Grades
             WriteResult("Average Grade" , stats.AverageGrade);
             WriteResult("Highest Grade" , stats.HighestGrade); //stats highestGrade gets coerces into type int
             WriteResult("Lowest Grade" , stats.LowestGrades);
+            WriteResult("Grade", stats.LetterGrade);
         }
 
 
+
+        static void WriteResult(string description, string result)
+        {
+            Console.WriteLine($"{description}: {result}", description, result);
+        }
 
         static void WriteResult(string description, float result)
         {
