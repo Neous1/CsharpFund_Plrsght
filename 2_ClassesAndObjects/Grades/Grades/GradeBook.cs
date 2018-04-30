@@ -56,7 +56,7 @@ namespace Grades
             }
         }
 
-        public NameChangedDelegate NameChanged;
+        public event NameChangedDelegate NameChanged;
         private string _name;
 
         private List<float> grades;
