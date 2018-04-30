@@ -18,7 +18,8 @@ namespace Grades
 
             book.NameChanged +=OnNameChanged;
             book.NameChanged +=OnNameChanged2;
-            book.NameChanged = null;
+            book.NameChanged +=OnNameChanged2;
+            book.NameChanged -=OnNameChanged2;
 
             book.Name = "Yvon's Grade book";
             book.Name = "Grade book";
