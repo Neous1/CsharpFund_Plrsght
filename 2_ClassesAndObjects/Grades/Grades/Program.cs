@@ -17,9 +17,6 @@ namespace Grades
             GradeBook book = new GradeBook(); 
 
             book.NameChanged +=OnNameChanged;
-            book.NameChanged +=OnNameChanged2;
-            book.NameChanged +=OnNameChanged2;
-            book.NameChanged -=OnNameChanged2;
 
             book.Name = "Yvon's Grade book";
             book.Name = "Grade book";
@@ -35,15 +32,12 @@ namespace Grades
             WriteResult("Lowest Grade" , stats.LowestGrades);
         }
 
-        private static void OnNameChanged(string existingname, string newName)
+        private static void OnNameChanged(object sender, NameChangedEventArgs args)
         {
-            Console.WriteLine($"Grade book changing name from {existingname} to {newName}");
+            Console.WriteLine($"Grade book changing name from {args.ExistingName} -> {args.NewName}");
         }
 
-        private static void OnNameChanged2(string existingname, string newName)
-        {
-            Console.WriteLine("***");
-        }
+
 
         static void WriteResult(string description, int result)
         {
