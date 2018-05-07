@@ -13,6 +13,45 @@ namespace Grades.Test.Types
     public class TypeTests
     {
         [TestMethod]
+        public void CheckingLetterGrade()
+        {
+            float grade;
+            CheckGrades(54.7f);
+            Assert.IsTrue(true,"A");
+            // return result;
+        }
+
+        private string CheckGrades(float grades)
+        {
+            float grade = 54.7f;
+            string result;
+
+            if (grade >= 90)
+            {
+                result = "A";
+            }
+            else if (grade >= 80)
+            {
+                result = "B";
+            }
+            else if (grade >= 70)
+            {
+                result = "C";
+            }
+            else if (grade >= 60)
+            {
+                result = "D";
+            }
+            else
+            {
+                result = "F";
+            }
+
+            return result;
+
+        }
+
+        [TestMethod]
         public void UsingArrays()
         {
             float[] grades;
@@ -36,6 +75,7 @@ namespace Grades.Test.Types
 
             Assert.AreEqual("YVON", name);
         }
+
         [TestMethod]
         public void AddDaysToDateTime()
         {
@@ -44,6 +84,7 @@ namespace Grades.Test.Types
 
             Assert.AreEqual(26, date.Day);
         }
+
         [TestMethod]
         public void ValueTypesPassByValue()
         {
