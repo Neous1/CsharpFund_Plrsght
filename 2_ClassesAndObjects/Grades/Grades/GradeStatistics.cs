@@ -26,7 +26,7 @@
                         result = "Average";
                         break;
                     case "D":
-                        result = "below Average";
+                        result = "Below Average";
                         break;
                     default:
                             result = "Failing";
