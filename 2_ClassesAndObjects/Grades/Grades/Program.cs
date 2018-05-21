@@ -15,8 +15,6 @@ namespace Grades
         {
 
             GradeBook book = new GradeBook(); 
-
-
             book.AddGrade(91);
             book.AddGrade(89.5f);
             book.AddGrade(75);
@@ -27,7 +25,7 @@ namespace Grades
             WriteResult("Average Grade" , stats.AverageGrade);
             WriteResult("Highest Grade" , stats.HighestGrade); //stats highestGrade gets coerces into type int
             WriteResult("Lowest Grade" , stats.LowestGrades);
-            WriteResult("Grade", stats.LetterGrade);
+            WriteResult(stats.Description, stats.LetterGrade);
         }
 
 
