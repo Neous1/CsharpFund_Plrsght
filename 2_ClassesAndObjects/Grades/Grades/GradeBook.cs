@@ -17,8 +17,7 @@ namespace Grades
 
         public GradeStatistics ComputeStatistics()
         {
-            //create a variable to point to the new instance of 
-            //GradeStatistic
+            Console.WriteLine("GradeBook :: ComputeStatistics");
             GradeStatistics stats = new GradeStatistics();
 
             stats.HighestGrade = 0;
@@ -64,7 +63,7 @@ namespace Grades
         public event NameChangedDelegate NameChanged;
         private string _name;
 
-        private List<float> grades;
+        protected List<float> grades;
 
 
         public void WriteGrades(TextWriter destination)
